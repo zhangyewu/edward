@@ -404,7 +404,8 @@ def copy(org_instance, dict_swap=None, scope="copied",
     op_type = new_name
 
     if compute_shapes:
-      set_shapes_for_outputs(new_op)
+      #set_shapes_for_outputs(new_op)
+      set_shape_and_handle_data_for_outputs(new_op)
     graph._record_op_seen_by_control_dependencies(new_op)
 
     if compute_device:
